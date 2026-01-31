@@ -554,6 +554,10 @@
           "minimax": {
             "name": "MiniMax",
             "description": "Use MiniMax high-performance model service, compatible with Anthropic API"
+          },
+          "longcat": {
+            "name": "LongCat (Meituan)",
+            "description": "Use Meituan LongCat model service, compatible with Anthropic API"
           }
         }
       },

@@ -266,5 +266,85 @@ export const VERSION_TEMPLATES: VersionTemplate[] = [
         description: 'MiniMax M2 最新模型'
       }
     ]
+  },
+  {
+    id: 'longcat',
+    name: '龙猫大模型 (LongCat)',
+    alias: 'longcat',
+    description: '使用美团龙猫大模型服务，支持Anthropic API兼容',
+    versionDescription: '龙猫大模型 - Anthropic兼容版本',
+    apiTokenUrl: 'https://longcat.chat/platform/docs/zh/ClaudeCode.html',
+    logoUrl: 'https://s3plus.meituan.net/aigc-media-resources/longcat/yeqian-logo.svg',
+    envVars: [
+      {
+        key: 'ANTHROPIC_BASE_URL',
+        value: 'https://api.longcat.chat/anthropic',
+        isRequired: true,
+        description: '龙猫大模型的Anthropic兼容端点'
+      },
+      {
+        key: 'ANTHROPIC_AUTH_TOKEN',
+        value: '',
+        isRequired: true,
+        placeholder: 'YOUR_LONGCAT_API_KEY',
+        description: '您的龙猫大模型API密钥（必填）'
+      },
+      {
+        key: 'ANTHROPIC_MODEL',
+        value: 'LongCat-Flash-Chat',
+        isRequired: false,
+        description: '默认使用的模型名称'
+      },
+      {
+        key: 'ANTHROPIC_SMALL_FAST_MODEL',
+        value: 'LongCat-Flash-Chat',
+        isRequired: false,
+        description: '快速轻量级模型名称'
+      },
+      {
+        key: 'ANTHROPIC_DEFAULT_SONNET_MODEL',
+        value: 'LongCat-Flash-Chat',
+        isRequired: false,
+        description: '默认Sonnet模型名称'
+      },
+      {
+        key: 'ANTHROPIC_DEFAULT_OPUS_MODEL',
+        value: 'LongCat-Flash-Chat',
+        isRequired: false,
+        description: '默认Opus模型名称'
+      },
+      {
+        key: 'CLAUDE_CODE_MAX_OUTPUT_TOKENS',
+        value: '6000',
+        isRequired: false,
+        description: '最大输出token数量'
+      },
+      {
+        key: 'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC',
+        value: '1',
+        isRequired: false,
+        description: '禁用非必要流量（1=启用，0=禁用）'
+      }
+    ],
+    models: [
+      {
+        id: 'LongCat-Flash-Chat',
+        name: 'LongCat-Flash-Chat',
+        isVision: false,
+        description: '龙猫Flash对话模型，适合通用对话场景'
+      },
+      {
+        id: 'LongCat-Flash-Thinking',
+        name: 'LongCat-Flash-Thinking',
+        isVision: false,
+        description: '龙猫Flash思考模型，适合需要推理的任务'
+      },
+      {
+        id: 'LongCat-Flash-Thinking-2601',
+        name: 'LongCat-Flash-Thinking-2601',
+        isVision: false,
+        description: '龙猫Flash思考模型2601版本，深度推理能力'
+      }
+    ]
   }
 ];

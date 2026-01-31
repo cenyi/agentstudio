@@ -581,6 +581,10 @@
           "minimax": {
             "name": "MiniMax",
             "description": "使用MiniMax的高性能模型服务，支持Anthropic API兼容"
+          },
+          "longcat": {
+            "name": "龙猫大模型 (LongCat)",
+            "description": "使用美团龙猫大模型服务，支持Anthropic API兼容"
           }
         }
       },
